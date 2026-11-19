@@ -9,13 +9,18 @@ const MODEL_URL = new URL("../model/model.json", document.baseURI).href;
 // The keys must match the labels in the trained model exactly.
 // Extension: a sixth label needs a genuinely retrained six-class model too;
 // adding a visual mapping cannot make a model recognize a class it never learned.
+
 const EMOTIONS = {
   happy: { color: [255, 215, 0], shape: "circle" },
   sad: { color: [45, 100, 225], shape: "square" },
   calm: { color: [45, 170, 85], shape: "triangle" },
   anxious: { color: [245, 140, 35], shape: "pentagon" },
   angry: { color: [225, 45, 45], shape: "spiky" },
+
+  // BONUS: Disgust
+  disgust: { color: [154, 203, 98], shape: "hexagon" },
 };
+
 
 // Movement is authored per class, like colour and shape. Each amount controls
 // the size of that movement; a larger pace makes it happen faster. Bounce
@@ -59,6 +64,14 @@ const MOTION_PROFILES = {
     size: { amount: 0.10, pace: 2.5 },
     bounce: { amount: 6, pace: 3.0 },
   },
+
+  // BONUS: DISGUST: a little sway, rotation and size change
+  disgust: {
+    sway: { amount: 12, pace: 1.3 },
+    rotation: { amount: 0.10, pace: 1.7 },
+    size: { amount: 0.07, pace: 2.1 },
+  },
+
 };
 
 
