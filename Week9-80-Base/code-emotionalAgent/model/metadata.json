@@ -1,0 +1,11 @@
+{
+  "tfjsVersion": "1.7.4",
+  "tmVersion": "2.4.19",
+  "packageVersion": "0.8.4-alpha2",
+  "packageName": "@teachablemachine/image",
+  "timeStamp": "2026-11-19T06:16:37.579Z",
+  "userMetadata": {},
+  "modelName": "tm-my-image-model",
+  "labels": ["happy", "sad", "calm", "anxious", "angry"],
+  "imageSize": 224
+}
